@@ -9,23 +9,24 @@ class Program
         int percent = int.Parse(userInput);
 
         string letter = "";
+        char sign = '\0';
 
         if (percent >= 90)
         {
             letter = "A";
         }
 
-        else if (percent >=80)
+        else if (percent >= 80)
         {
             letter = "B";
         }
 
-        else if (percent >=70)
+        else if (percent >= 70)
         {
             letter = "C";
         }
 
-        else if (percent >=60)
+        else if (percent >= 60)
         {
             letter = "D";
 
@@ -36,15 +37,29 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your grade is: {letter}");
+        if (percent % 10 >= 7)
+        {
+            sign = '+';
+        }
+
+        else if (percent % 10 < 3)
+        {
+            sign = '-';
+        }
+
+       //Console.WriteLine($"Your grade is: {letter}");
+        if (sign != '\0')
+        {
+            Console.WriteLine($"{letter}" + sign);
+        }
 
         if (percent >= 70)
         {
-            Console.WriteLine("You passed");
+            Console.WriteLine("You passed. Congratulations!");
         }
         else
         {
-            Console.WriteLine("Try again");
+            Console.WriteLine("Try again next term");
         }
 
     }
