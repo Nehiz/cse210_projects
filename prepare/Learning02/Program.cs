@@ -1,14 +1,26 @@
 using System;
 
-public class Job
+class Program
 {
-    public string _jobTitle;
-    public string _company;
-    public int _startYear;
-    public int _endYear;
-
-    public void Display()
+    static void Main(string[] args)
     {
-        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear} {_endYear}");
+        Job job1 = new Job();
+        job1._jobTitle = "Lab assistant";
+        job1._company = "Nehis Biochemicals";
+        job1._startYear = 2017;
+        job1._endYear = 2021;
+
+        Job job2 = new Job();
+        job2._jobTitle = "Facilitator";
+        job2._company = "ChemCrystals";
+        job2._startYear = 2022;
+        job2._endYear = 2023;
+        
+        Resume myResume = new Resume();
+        myResume._name = "Nehikhare Efehi";
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
     }
 }
