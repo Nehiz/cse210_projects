@@ -1,10 +1,10 @@
 using System;
 
-class Program
+class Grade
 {
     static void Main(string[] args)
     {
-        Console.Write("What is your grade percentage? ");
+        Console.WriteLine("What is your grade percentage? ");
         string userInput = Console.ReadLine();
         int percent = int.Parse(userInput);
 
@@ -50,12 +50,12 @@ class Program
        //Console.WriteLine($"Your grade is: {letter}");
         if (sign != '\0')
         {
-            Console.WriteLine($"{letter}" + sign);
+            Console.WriteLine();
         }
 
         if (percent >= 70)
         {
-            Console.WriteLine("You passed. Congratulations!");
+            Console.WriteLine($"Your grade is {letter} {sign}. Congratulation! You passed.");
         }
         else
         {
