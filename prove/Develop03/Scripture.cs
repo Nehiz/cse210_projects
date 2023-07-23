@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-class Scripture
-{
+class Scripture{
     private List<Word> words;
     private ScriptureReference reference;
     public string FullReference => reference.ToString();
