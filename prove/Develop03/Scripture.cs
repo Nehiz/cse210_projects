@@ -60,7 +60,7 @@ class ScriptureReference
         return reference;
     }
 
-    // rest of the ScriptureReference class
+
 }
 
 
@@ -91,7 +91,7 @@ class Word
 
     }
 
-    //rest of the Word class
+
 
 }
 

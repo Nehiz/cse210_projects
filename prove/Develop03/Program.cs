@@ -12,6 +12,7 @@ class Program
 
         Scripture scripture = new Scripture(reference, text);
 
+        // Display the initial scripture text
         Console.Clear();
         scripture.Display();
 
