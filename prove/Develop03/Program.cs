@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-class Program
-{
+class Program{
     static void Main()
     {
         Console.WriteLine("Enter the scriture reference (e.g, John 3:16):");
