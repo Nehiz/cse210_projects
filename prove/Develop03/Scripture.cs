@@ -30,7 +30,20 @@ class Scripture{
         words[randomIndex].Hide();
     }
 
-    // rest of the scripture class
+    public bool AllWordsHidden()
+    {
+        return words.All(word => word.IsHidden);
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"{FullReference}\n");
+        foreach (Word word in words)
+        {
+            Console.Write(word.ToString() + " ");
+        }
+        Console.WriteLine("\n");
+    }
 }
 
 class ScriptureReference
@@ -54,7 +67,7 @@ class ScriptureReference
 class Word
 {
     private string value;
-    private bool IsHidden;
+    public bool IsHidden {get; private set; }
 
     public Word(string value)
     {
@@ -65,6 +78,11 @@ class Word
     public void Hide()
     {
         IsHidden = true;
+    }
+
+    public void Unhide()
+    {
+        IsHidden = false;
     }
 
     public override string ToString()
